@@ -6,8 +6,13 @@ description: 'Saturday 10 AM Ames Iowa Al-Anon AFG Meeting. Collegiate United Me
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
 featuredImage: /_images/saturday.png
 order: 70
+
+details: |
+    | Time | Day |Address           | Room      | City       | Name | Notes |
+    |------|-----|------------------|-----------|------------|--------------|-------|
+    | 10AM | Sat | Collegiate United Methodist Church, 2622 Lincoln Way | Pine Room - located in basement | Ames, Iowa 50014 | New Hope | Use West Door |
 ---
 
-| Time | Day |Address           | Room      | City       | Name | Notes |
-|------|-----|------------------|-----------|------------|--------------|-------|
-| 10AM | Sat | Collegiate United <br> Methodist Church <br> 2622 Lincoln Way | Pine Room - located in basement | Ames, Iowa 50014 | New Hope | Use West Door |
+- Every Saturday 10 AM
+
+### A good Al-Anon meeting in Ames Iowa

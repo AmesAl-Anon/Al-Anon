@@ -8,6 +8,12 @@
   "googleAnalyticsID": "",
 
   "navbarMenu": [
+
+  {
+      "anchor": "All Ames Al-Anon Meetings",
+      "url": "/AmesIowaAl-AnonMeetingsList/"
+    },
+
     {
       "anchor": "Monday Newcomers",
       "url": "/Monday/"
@@ -35,9 +41,9 @@
   ],
   "navbarButtons": [
     {
-      "anchor": "All Ames",
-      "class": "is-small is-danger",
-      "url": "/AmesIowaAl-AnonMeetingsList/"
+      "anchor": "How Can Al-Anon Help Me?",
+      "class": "is-small is-error",
+      "url": "https://al-anon.org/newcomers/"
     }
   ],
   "social": {

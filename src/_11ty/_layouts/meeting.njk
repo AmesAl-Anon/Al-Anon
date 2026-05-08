@@ -10,32 +10,44 @@ featuredImage: /_images/default.jpg
 
     <main class="section is-flex-grow-1">
 
-
       <article class="container articulo">
-        <header class=" container has-text-centered">
-
           <h1 class="title is-2 is-size-4-mobile has-text-weight-bold">{{ title }}</h1>
-          <p class="subtitle is-size-6 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>
-          <br>  
-        </header>
 
         <div class="is-flex">
 
           <div class="articulo-content content mb-0">
 
+            <h2 class="subtitle is-size-4 has-text-grey-dark has-text-weight-light is-family-sans-serif">
+              {{ description }}
+            </h2>
+
+            {% if details %} {# Check if details exist before rendering #}
+              {{ details | markdownify | safe }}
+            {% endif %}
+
             {{ content | safe }}
 
-          <div class="tags is-justify-content-center mt-6">
+          <div class="tags is-justify-content-left mt-1">{# mt adds margin to separate the tags from the content #}
             {% for tag in tags %}
               <span class="tag">{{ tag }}</span>
             {% endfor %}
-          </div>
-          
+
           {% if featuredImage %}
-          <figure class="image featured-image py-5">
-            <img src="{{featuredImage}}" alt="{{title}}" class="image is-fullwidth">
-          </figure>
-        {% endif %}
+            <figure class="image is-128x128">
+              <img src="{{featuredImage}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
+            </figure>
+          {% endif %}
+
+          {% if featuredImage2 %}
+            <figure class="image is-128x128">
+              <img src="{{featuredImage2}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
+            </figure>
+          {% endif %}
+          
+            <figure class="image mb-4 is-128x128">
+              <img src="/_images/favicon.png" alt="{{title}}" title="{{title}}" width="20" height="20%">
+            </figure>
+        </div>
 
       </article>
     </main>
@@ -44,7 +56,7 @@ featuredImage: /_images/default.jpg
       {% include "related-meetings.njk" %}
     {% endif %}
 
-    {% renderFile "/Users/edh/Sites/AmesAl-Anon/src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the stream Ed H added 4/22/2026 #}
+    {% renderFile "./src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the stream Ed H added 4/22/2026 #}
     {% include "footer.njk" %}
   </body>
 

@@ -5,7 +5,7 @@ title: Al-Anon meetings in Ames Iowa USA
 <body class="is-flex is-flex-direction-column">
   {% include "nav.njk" %}
   {{ content | safe }}
-  {% renderFile "/Users/edh/Sites/AmesAl-Anon/src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the stream #}
+  {% renderFile "./src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the stream because footer is markdown and must be rendered first #}
   {% include "footer.njk" %}
 </body>
 </html>
