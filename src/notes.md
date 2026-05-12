@@ -1,3 +1,14 @@
+---
+layout: meeting.njk
+title: Noes on how to build Ames Iowa Al-Anon Meetings site
+tags: ['notes', 'Ames Iowa']
+featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
+order: 90
+date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
+description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'
+eleventyExcludeFromCollections: true
+---
+
 Ed H created this project March 2026 
 and pretty much finished 5/9/2026
 for Ames Al-Anon
