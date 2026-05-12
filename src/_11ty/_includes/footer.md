@@ -1,7 +1,7 @@
 <footer class="section has-background-warning">
   <div class="container">
 
-  [Ames Iowa Al-Anon](/index.html)
+  [Ames Iowa Al-Anon Home Page](/index.html)
 
   [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)
 
@@ -9,7 +9,7 @@
 
   [Al-Anon Family Groups AFG (Al-Anon.org)](https://al-anon.org/)
 
-  [Find more Al-Anon Meetings worldwide](https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/)
+  [Find more Al-Anon Meetings worldwide (Al-Anon.org find a meeting)](https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/)
 
   [Aim for Ames](https://AimForAmes.org/)
 

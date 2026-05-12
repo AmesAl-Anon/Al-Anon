@@ -133,11 +133,13 @@ module.exports = function (eleventyConfig) {
 
     // To include a Markdown file like footer.md in your Eleventy templates, 
     // use the EleventyRenderPlugin added to this eleventy.js configuration file,
-    // which allows you to render Markdown content directly in your templates.
-    // Ed Hendrickson Jr. added 4/21/2026 Next use {% renderFile "/pathto/footer.md" %}
+    // which Ed H added above at the top of this file is is faster when outside
+    // of the module.exports function. This plugin allows you to render any file type that Eleventy supports, 
+    // including Markdown files, directly in your templates.
+    // 
+    // Ed H added 4/21/2026 Next use {% renderFile "/pathto/footer.md" %}
     // in your template where you want the footer to appear. Neat. Now you can use markdown inside nunjucks templates. Ed H. 4/21/2026.
 
-    const { EleventyRenderPlugin } = require("@11ty/eleventy");
     eleventyConfig.addPlugin(EleventyRenderPlugin);
 
     // PurgeCss
@@ -203,7 +205,7 @@ module.exports = function (eleventyConfig) {
             includes: "/_11ty/_includes/",
             layouts: "/_11ty/_layouts/",
             data: "/_11ty/_data/",
-            output: "build",
+            output: "./build" // Output to build dir. Note Ed H installed npm gh-pages package 5/12/2026 so GitHub Pages won't need a /folder in the URL. Have to set github pages to use the main branch of gh-pages on github.com
         }
     }
 }

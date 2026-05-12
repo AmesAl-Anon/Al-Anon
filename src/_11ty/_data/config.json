@@ -4,12 +4,12 @@
   "domain": "https://AmesAl-Anon.github.org",
   "language": "es",
   "logoUrl": "/_images/Al-Anon-logo.jpg",
-  "search": true,
+  "search": false,
   "googleAnalyticsID": "",
 
   "navbarMenu": [
 
-  {
+    {
       "anchor": "All Ames Al-Anon Meetings",
       "url": "/AmesIowaAl-AnonMeetingsList/"
     },
@@ -43,7 +43,7 @@
     {
       "anchor": "How Can Al-Anon Help Me?",
       "class": "is-small is-error",
-      "url": "https://al-anon.org/newcomers/"
+      "url": "/AmesIowaAl-AnonMeetingsList/"
     }
   ],
   "social": {

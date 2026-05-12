@@ -12,12 +12,19 @@ eleventyExcludeFromCollections: true
 pagination:
   data: collections.sortedPosts
   size: 6
-  alias: items
   addAllPagesToCollections: true
 ---
 
+{# Ed H. added this code 5/8/2026 to create the All Ames Al-Anon meetings page on the fly
+using the details frontmatter variable from each file. The details are written in markdown so there
+is a filter in eleventy.js file called markdownify that renders the details first!!
+Also, To find the URL of the resulting file for a paginated item in Eleventy, it can be found in
+page.url and in the for loop below it will be in pageitem.page.url. So Monday will go to the URL /Monday/
+Thursday to /Thursday/ etc.  #}
+
 {% for pageitem in pagination.items %}
-    <h3>{{ pageitem.data.title }}</h3>
+
+    <h3><a href ="{{pageitem.page.url}}">{{ pageitem.data.title }}</a></h3>
     <p>{{ pageitem.data.details | markdownify | safe }}</p>
 {% endfor %}
 

@@ -27,10 +27,14 @@ featuredImage: /_images/default.jpg
 
             {{ content | safe }}
 
-          <div class="tags is-justify-content-left mt-1">{# mt adds margin to separate the tags from the content #}
-            {% for tag in tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
+          <div class="tags is-justify-content-left">
+
+            {# Ed H. 5/7/2026 display tags horizontally #}
+            <div class="tags is-flex is-flex-direction-column">
+              {% for tag in tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
 
           {% if featuredImage %}
             <figure class="image is-128x128">

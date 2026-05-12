@@ -18,11 +18,14 @@ pagination:
       {% endfor %}
     </div>
 
-    <div class="columns">
+    {# No need for the 2 pagination arrows if there is only one page of items. Ed H removed 5/9/2026 #}
+    {#
+     <div class="columns">
       <div class="column has-text-centered">
-        {% include "pagination.njk" %} {# Pagination puts the 2 arrows and allows for  #}
+        {% include "pagination.njk" %}  
       </div>
     </div>
+    #}
 
   </div>
 </section>

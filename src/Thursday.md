@@ -8,9 +8,9 @@ description: '1201 McCormick AVE, Ames Iowa 50010. Thursday 5:45PM Ames Iowa "Da
 order: 50
 permalink: /Thursday/
 details: |
-    | Time.  | Day | Address           | Room      | City       | Name | Notes |
-    |--------|-----|------------------|-----------|------------|--------------|-------|
-    | 5:45PM | Thu | 1201 McCormick Ave | Al-Anon room (look for Al-Anon sign) | Ames, Iowa 50010 | Daily Hope & Courage | Familes, Friends of Alchoholics |
+    | Time.  | Day | Address           | Room      | City       | Name |
+    |--------|-----|------------------|-----------|------------|--------------|
+    | 5:45PM | Thu | 1201 McCormick Ave | Al-Anon room (look for Al-Anon sign) | Ames, Iowa 50010 | Daily Hope & Courage |
 ---
 
 - Every Thursday 5:45 PM to 6:45 PM
