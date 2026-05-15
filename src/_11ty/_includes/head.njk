@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="{{ '/theme.css' | url }}">
     <link rel="icon" type="image/png" href="/_images/favicon.png" sizes="32x32">
 
+    {% if page.url == "/" %}
+        <! Ed H added Google Search Console verification meta tag. only needs to be in the home page 5/15/2026 
+        to enable Google Search Console for the site.>
+        {# This meta tag needed to verify ownership of the site for Google Search Console, 
+        which provides insights into how the site is performing in Google search results. #}
+        <meta name="google-site-verification" content="rUctYDvFsPCu89gqYTSM2iyHOlY55zcVypyfxvt44xk" />
+    {% endif %}
+
     {% if layout === 'meeting.njk' %}
       <meta property="og:site_name" content="{{config.title}}" />
       <meta property="og:type" content="article" />

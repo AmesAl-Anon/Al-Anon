@@ -29,7 +29,7 @@ into the main "." part of the repository and then commit to achieve 1) above.
 
  ### but on 5/12/2026
 
- ### Wait ... I discovered a method to keep the build files separate in the build folder and
+ ## Wait ... I discovered a method to keep the build files separate in the build folder and
  deploy to github and keep them in a separate branch gh-pages
 
  This is how I did this:
@@ -39,31 +39,30 @@ into the main "." part of the repository and then commit to achieve 1) above.
  gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a temporary clone of the repository, copies 
  specified source files (such as a dist or build folder from eleventy app), commits them, and pushes them to the target branch. 
 
- > npm install --save-dev gh-pages
+ > npm install --save-dev gh-pages <-- only do this once
 
 2) Added a Deploy Script to package.json:
 
-> "scripts": {
+> "scripts": {                      <--only do this once
 >   "deploy": "gh-pages -d build"
 > }
 
-3) Set the output dir to build/ in eleventy.js
+3) Set the output dir to build/ in eleventy.js    <-- just do this one time
 
 only do 1) 2) and 3) above one time then do the following every time you want to change the website
 
 
-4) npm run quiet <-- this builds the project to the build folder
+4) npm run quiet                    <-- build the project to the build folder
 
 5) Deploy to github
 
-> npm run deploy. <-- this git pushes the contents of build folder into the gh-pages branch
+> npm run deploy.                   <-- this git command pushes the contents of build folder into the gh-pages branch
 
-6) Configure GitHub Pages: 
+6) Configure GitHub Pages:          <-- only do this once
 In your repository's Settings > Pages
-set the source to the gh-pages branch and the folder to /(root). 
-Which Ed H did on 5/12/2026
+set the source to the gh-pages branch and the folder to /(root).  <-- Ed H did this on 5/12/2026
 
-This is now working the way I want it.
+This is now working the way I want it. Yahoo !!
 
  ***
 
@@ -98,4 +97,14 @@ git push origin main
 
 or you can do all of the above except the first command above git mv build/* .
  from the Visual Studio Code github publish extension too except can't do the build/ mv 
+
+ ********
+
+ Make this site google searcheable
+
+ 1) go to Google Search verification site
+
+ 2) meta name="google-site-verification" content="the random code that google told you to put into the header" put the meta tag line into the header of this website and it only needs to go into the home page html file.
+
+ 3) then go back to Google search and click the proper button to verfiy home page
 

@@ -11,6 +11,8 @@
     <link rel="icon" type="image/png" href="/_images/favicon.png" sizes="32x32">
 
     
+
+    
       <meta property="og:site_name" content="Ames Iowa Al-Anon Meetings" />
       <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary" />
@@ -132,7 +134,7 @@ into the main &quot;.&quot; part of the repository and then commit to achieve 1)
 <h3>after doing all of the mumbo jumbo below just to have a build folder seperate from the src folder,</h3>
 <p>i'm thinking it would be easier to build the files into the /root</p>
 <h3>but on 5/12/2026</h3>
-<h3>Wait ... I discovered a method to keep the build files separate in the build folder and</h3>
+<h2>Wait ... I discovered a method to keep the build files separate in the build folder and</h2>
 <p>deploy to github and keep them in a separate branch gh-pages</p>
 <p>This is how I did this:</p>
 <ol>
@@ -142,38 +144,37 @@ gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a t
 specified source files (such as a dist or build folder from eleventy app), commits them, and pushes them to the target branch.</li>
 </ol>
 <blockquote>
-<p>npm install --save-dev gh-pages</p>
+<p>npm install --save-dev gh-pages &lt;-- only do this once</p>
 </blockquote>
 <ol start="2">
 <li>Added a Deploy Script to package.json:</li>
 </ol>
 <blockquote>
-<p>&quot;scripts&quot;: {
+<p>&quot;scripts&quot;: {                      &lt;--only do this once
 &quot;deploy&quot;: &quot;gh-pages -d build&quot;
 }</p>
 </blockquote>
 <ol start="3">
-<li>Set the output dir to build/ in eleventy.js</li>
+<li>Set the output dir to build/ in eleventy.js    &lt;-- just do this one time</li>
 </ol>
 <p>only do 1) 2) and 3) above one time then do the following every time you want to change the website</p>
 <ol start="4">
 <li>
-<p>npm run quiet &lt;-- this builds the project to the build folder</p>
+<p>npm run quiet                    &lt;-- build the project to the build folder</p>
 </li>
 <li>
 <p>Deploy to github</p>
 </li>
 </ol>
 <blockquote>
-<p>npm run deploy. &lt;-- this git pushes the contents of build folder into the gh-pages branch</p>
+<p>npm run deploy.                   &lt;-- this git command pushes the contents of build folder into the gh-pages branch</p>
 </blockquote>
 <ol start="6">
-<li>Configure GitHub Pages:
+<li>Configure GitHub Pages:          &lt;-- only do this once
 In your repository's Settings &gt; Pages
-set the source to the gh-pages branch and the folder to /(root).
-Which Ed H did on 5/12/2026</li>
+set the source to the gh-pages branch and the folder to /(root).  &lt;-- Ed H did this on 5/12/2026</li>
 </ol>
-<p>This is now working the way I want it.</p>
+<p>This is now working the way I want it. Yahoo !!</p>
 <hr>
 <p>Ignore the following. This was my first attempt at having my build cake and eating it too.</p>
 <ol start="4">
@@ -203,6 +204,19 @@ git commit -m &quot;Update Al-Anon site + move build files to root again&quot;
 git push origin main</p>
 <p>or you can do all of the above except the first command above git mv build/* .
 from the Visual Studio Code github publish extension too except can't do the build/ mv</p>
+<hr>
+<p>Make this site google searcheable</p>
+<ol>
+<li>
+<p>go to Google Search verification site</p>
+</li>
+<li>
+<p>meta name=&quot;google-site-verification&quot; content=&quot;the random code that google told you to put into the header&quot; put the meta tag line into the header of this website and it only needs to go into the home page html file.</p>
+</li>
+<li>
+<p>then go back to Google search and click the proper button to verfiy home page</p>
+</li>
+</ol>
 
 
           <div class="tags is-justify-content-left">
@@ -255,7 +269,7 @@ from the Visual Studio Code github publish extension too except can't do the bui
       <p>
       <time class="has-text-grey-dark is-size-7">
       
-      This page last updated/published: 5/12/2026, 2:56 PM
+      This page last updated/published: 5/15/2026, 12:32 PM
       </time>
       </p>
       </p
