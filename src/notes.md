@@ -54,13 +54,21 @@ only do 1) 2) and 3) above one time then do the following every time you want to
 
 4) npm run quiet                    <-- build the project to the build folder
 
-5) Deploy to github
+5) git add . <-- because want to add source code files >
 
-> npm run deploy.                   <-- this git command pushes the contents of build folder into the gh-pages branch
+6) git status <-- to see what files are staged to be committed
+
+6) commit -m "note for this commit maybe say upload source files changed" <-- because you want to add and commit the source code
+
+7) Deploy to github
+
+  > npm run deploy.                   <-- this git command pushes the contents of build folder into the gh-pages branch
+                                        it only publishes build folder and build files not the source files.
 
 6) Configure GitHub Pages:          <-- only do this once
-In your repository's Settings > Pages
-set the source to the gh-pages branch and the folder to /(root).  <-- Ed H did this on 5/12/2026
+
+        In your repository's Settings > Pages
+        set the source to the gh-pages branch and the folder to /(root).  <-- Ed H did this on 5/12/2026
 
 This is now working the way I want it. Yahoo !!
 
@@ -96,15 +104,18 @@ git push origin main
 
 
 or you can do all of the above except the first command above git mv build/* .
- from the Visual Studio Code github publish extension too except can't do the build/ mv 
+from the Visual Studio Code github publish extension too except can't do the build/ mv 
 
- ********
+***
 
- Make this site google searcheable
+## Make AmesAl-Anon.github.io site google searcheable
 
- 1) go to Google Search verification site
+1) go to Google Search verification site
 
- 2) meta name="google-site-verification" content="the random code that google told you to put into the header" put the meta tag line into the header of this website and it only needs to go into the home page html file.
+2) meta name="google-site-verification" content="random code that google told you to put into the header" <-- put this meta tag line into the header of this website and it only needs to go into the home page html file. I wrote some nunjucks code so it will only be in the index.html of the main site.
 
- 3) then go back to Google search and click the proper button to verfiy home page
+3) Go back to Google search and finish the verification by clicking the proper button to verfiy home page
 
+4) Google will verity the site and say Done -- Ed H. done 5/15/2026
+
+5) In a day or so go to https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/ and see if it is indexed
